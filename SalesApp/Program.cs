@@ -17,6 +17,9 @@ namespace SalesApp
             var select = Console.ReadLine();
 
             var sql = $"SELECT count FROM tab_products_stock JOIN tab_products ON tab_products_stock.product_id = tab_products.id WHERE product_id = {select}";
+            /*var command = new MySqlCommand();
+            command.CommandText = sql;
+            command.Connection = data_base;*/
             var command = new MySqlCommand
             {
                 CommandText = sql,
